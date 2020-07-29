@@ -1,0 +1,10 @@
+<% provide :title, (t ".about_title") %>
+<h1><%= t ".heading" %></h1>
+<p>
+  <%= t(".description_detail", href: link_to(t("ruby_on_rails_tut"), Settings.links.rails_tutorial.home_page))[0].html_safe %>
+  <%= t(".description_detail", href: link_to(t(".learn_enough"), Settings.links.learn_enough))[1].html_safe %>
+  <%= t(".description_detail", href: link_to(t(".book"), Settings.links.rails_tutorial.book_page))[2].html_safe %>
+  <%= t(".description_detail", href: link_to(t(".screencast"), Settings.links.rails_tutorial.screencasts_page))[3].html_safe %>
+  <%= t(".description_detail", href: link_to(t("ruby_on_rails"), Settings.links.rails_tutorial.home_page))[4].html_safe %>
+  <%= t ".description_title" %>
+</p>
