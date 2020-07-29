@@ -1,4 +1,4 @@
-<% provide :title, (t ".about_title") %>
+<% provide :title, t(".about_title") %>
 <h1><%= t ".heading" %></h1>
 <p>
   <%= t(".description_detail", href: link_to(t("ruby_on_rails_tut"), Settings.links.rails_tutorial.home_page))[0].html_safe %>
