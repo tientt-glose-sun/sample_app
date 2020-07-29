@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= yield(:title) %> | <%= t ".suffix_title" %></title>
-  <meta charset="utf-8">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-  <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
-</head>
-
-<body>
-  <%= yield %>
-  <%= link_to t(".en"), locale: :en %>
-  <%= link_to t(".vi"), locale: :vi %>
-</body>
+  <head>
+    <title><%= full_title yield(:title) %></title>
+    <meta charset="utf-8">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+  <body>
+    <%= yield %>
+    <%= link_to t(".en"), locale: :en %>
+    <%= link_to t(".vi"), locale: :vi %>
+  </body>
 </html>
