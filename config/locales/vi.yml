@@ -7,7 +7,7 @@ vi:
         password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
     errors:
-      format: "%{attribute} %{message}"
+      format: '%{attribute} %{message}'
       messages:
         accepted: phải được đồng ý
         blank: không thể để trắng
@@ -27,12 +27,11 @@ vi:
         odd: phải là số lẻ
         other_than: cần phải khác %{count}
         present: cần phải để trắng
-        taken: đã có
+        required: phải có
+        taken: đã tồn tại
         too_long: quá dài (tối đa %{count} ký tự)
         too_short: quá ngắn (tối thiểu %{count} ký tự)
         wrong_length: độ dài không đúng (phải là %{count} ký tự)
-        required: "phải có"
-        taken: "đã tồn tại"
   hello: Xin chào thế giới
   layouts:
     application:
@@ -46,20 +45,37 @@ vi:
       description_title: Hướng dẫn %{href}
       new_footer: Tin tức
     header:
+      account_header: Tài khoản
       help_header: Trợ giúp
       home_header: Trang chủ
+      log_out_header: Đăng xuất
       login_header: Đăng nhập
       logo_alt: sample app
+      profile_header: Hồ sơ
+      setting_header: Cài đặt
+      users_header: Danh sách người dùng
   ruby_on_rails: Ruby on Rails
   ruby_on_rails_book: sách hướng dẫn Rails.
   ruby_on_rails_help: trang trợ giúp Rails.
   ruby_on_rails_tut: Ruby on Rails Tutorial
   ruby_on_rails_tut_author: Michael Hartl
   s_text: Đẹp tựa bông hoa
+  sessions:
+    new:
+      email_login: Email
+      heading: Đăng nhập
+      login_title: Đăng nhập
+      new_user: Chưa có tài khoản?
+      password_login: Mật khẩu
+      sessions_create: Đăng nhập
+      signup_now: Đăng ký ngay!
+    create:
+      fail_mess_create: Sai email và mật khẩu.
+      success_mess: Đăng nhập thành công.
   shared:
     error_messages:
       errors_count:
-        other: "Có %{count} lỗi"
+        other: Có %{count} lỗi
   static_pages:
     about:
       about_title: Về chúng tôi
@@ -91,13 +107,13 @@ vi:
       home_title: Trang chủ
       sign_up_button: Đăng ký ngay!
   users:
+    create:
+      fail_mess_create: Tài khoản tạo không thành công.
+      success_mess: Chào mừng tới sample app!
     new:
       description_title: Đây sẽ là trang đăng ký cho người dùng mới.
       heading: Đăng ký
       signup_create: Tạo tài khoản
       signup_title: Đăng ký
-    create:
-      success_mess: Chào mừng tới sample app!
-      fail_mess_create: Tài khoản tạo không thành công.
     show:
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.

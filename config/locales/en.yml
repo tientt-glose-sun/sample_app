@@ -7,7 +7,7 @@ en:
         password: Password
         password_confirmation: Confirmation
     errors:
-      format: "%{attribute} %{message}"
+      format: '%{attribute} %{message}'
       messages:
         accepted: must be accepted
         blank: can't be blank
@@ -43,16 +43,33 @@ en:
       description_title: The %{href}
       new_footer: News
     header:
+      account_header: Account
       help_header: Help
       home_header: Home
+      log_out_header: Log out
       login_header: Log in
       logo_alt: sample app
+      profile_header: Profile
+      setting_header: Settings
+      users_header: Users
   ruby_on_rails: Ruby on Rails
   ruby_on_rails_book: Ruby on Rails Tutorial book.
   ruby_on_rails_help: Rails Tutorial help page.
   ruby_on_rails_tut: Ruby on Rails Tutorial
   ruby_on_rails_tut_author: Michael Hartl
   s_text: Like a flower
+  sessions:
+    new:
+      email_login: Email
+      heading: Log in
+      login_title: Log in
+      new_user: New user?
+      password_login: Password
+      sessions_create: Log in
+      signup_now: Sign up now!
+    create:
+        fail_mess_create: Invalid email/password combination.
+        success_mess: Log in successfully.
   shared:
     error_messages:
       errors_count:
@@ -89,13 +106,13 @@ en:
       home_title: Home
       sign_up_button: Sign up now!
   users:
+    create:
+      fail_mess_create: Account create fail.
+      success_mess: Welcome to the Sample App!
     new:
       description_title: This will be a signup page for new users.
       heading: Sign up
       signup_create: Create my account
       signup_title: Sign up
-    create:
-      success_mess: Welcome to the Sample App!
-      fail_mess_create: Account create fail.
     show:
       fail_mess_notfound: Account not found.
