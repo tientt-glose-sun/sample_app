@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   USERS_PARAMS = %i(name email password password_confirmation).freeze
 
+  attr_accessor :remember_token
+
   validates :name, presence: true,
     length: {maximum: Settings.validations.name.max_length}
 
@@ -15,6 +17,37 @@ class User < ApplicationRecord
   has_secure_password
 
   before_save :email_downcase
+
+  def remember
+    self.remember_token = User.new_token
+    update :remember_digest, User.digest(remember_token)
+  end
+
+  def authenticated? remember_token
+    return false unless remember_digest
+
+    BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  def forget
+    update :remember_digest, nil
+  end
+
+  class << self
+    def digest string
+      cost =
+        if ActiveModel::SecurePassword.min_cost
+          BCrypt::Engine::MIN_COST
+        else
+          BCrypt::Engine.cost
+        end
+      BCrypt::Password.create string, cost: cost
+    end
+
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+  end
 
   private
 
