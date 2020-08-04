@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
   def create
     @user = User.new user_params
+
     if @user.save
+      log_in @user
       flash[:success] = t ".success_mess"
-      redirect_to user_path(@user)
+      redirect_to user_path @user
     else
-      flash[:danger] = t ".fail_mess_create"
+      flash.now[:danger] = t ".fail_mess_create"
       render :new
     end
   end
