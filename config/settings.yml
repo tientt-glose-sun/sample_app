@@ -1,6 +1,9 @@
 static_pages:
-    home:
-      image_size: 200px
+  home:
+    image_size: 200px
+sessions:
+  create:
+    select_box: 1
 links:
   rails_tutorial:
     home_page: https://www.railstutorial.org/

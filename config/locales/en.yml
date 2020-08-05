@@ -59,17 +59,18 @@ en:
   ruby_on_rails_tut_author: Michael Hartl
   s_text: Like a flower
   sessions:
+    create:
+      fail_mess_create: Invalid email/password combination.
+      success_mess: Log in successfully.
     new:
       email_login: Email
       heading: Log in
       login_title: Log in
       new_user: New user?
       password_login: Password
+      remember_me: Remember me on this computer
       sessions_create: Log in
       signup_now: Sign up now!
-    create:
-        fail_mess_create: Invalid email/password combination.
-        success_mess: Log in successfully.
   shared:
     error_messages:
       errors_count:

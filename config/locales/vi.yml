@@ -61,17 +61,18 @@ vi:
   ruby_on_rails_tut_author: Michael Hartl
   s_text: Đẹp tựa bông hoa
   sessions:
+    create:
+      fail_mess_create: Sai email và mật khẩu.
+      success_mess: Đăng nhập thành công.
     new:
       email_login: Email
       heading: Đăng nhập
       login_title: Đăng nhập
       new_user: Chưa có tài khoản?
       password_login: Mật khẩu
+      remember_me: Ghi nhớ đăng nhập
       sessions_create: Đăng nhập
       signup_now: Đăng ký ngay!
-    create:
-      fail_mess_create: Sai email và mật khẩu.
-      success_mess: Đăng nhập thành công.
   shared:
     error_messages:
       errors_count:
