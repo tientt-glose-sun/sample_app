@@ -32,7 +32,6 @@ vi:
         too_long: quá dài (tối đa %{count} ký tự)
         too_short: quá ngắn (tối thiểu %{count} ký tự)
         wrong_length: độ dài không đúng (phải là %{count} ký tự)
-  delete: Xóa
   hello: Xin chào thế giới
   layouts:
     application:
@@ -77,7 +76,6 @@ vi:
   shared:
     error_messages:
       errors_count:
-        one: Có %{count} lỗi
         other: Có %{count} lỗi
   static_pages:
     about:
@@ -113,21 +111,6 @@ vi:
     create:
       fail_mess_create: Tài khoản tạo không thành công.
       success_mess: Chào mừng tới sample app!
-    destroy:
-      success_mess_delete: Tài khoản đã bị xóa.
-      fail_mess_notfound: Không tìm thấy thông tin tài khoản.
-    edit:
-      change_link: Thay đổi
-      edit_create: Lưu thay đổi
-      edit_title: Cập nhật thông tin
-      heading: Cập nhật hồ sơ của bạn
-      login_remind: Hãy đăng nhập để tiếp tục.
-      fail_mess_notfound: Không tìm thấy thông tin tài khoản.
-    index:
-      heading: Danh sách toàn bộ người dùng
-      index_title: Toàn bộ người dùng
-    logged_in_user:
-      login_remind: Hãy đăng nhập để tiếp tục.
     new:
       description_title: Đây sẽ là trang đăng ký cho người dùng mới.
       heading: Đăng ký
@@ -135,18 +118,3 @@ vi:
       signup_title: Đăng ký
     show:
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.
-      login_remind: Hãy đăng nhập để tiếp tục.
-    update:
-      fail_mess_update: Cập nhật không thành công.
-      login_remind: Hãy đăng nhập để tiếp tục.
-      success_mess_update: Hồ sơ cập nhật thành công.
-      fail_mess_notfound: Không tìm thấy thông tin tài khoản.
-    user:
-      confirm: Bạn chắc chứ?
-      delete_link: Xóa
-  views:
-    pagination:
-      next: Trang tiếp >
-      previous: < Trang trước
-      first: << Trang đầu
-      last: Trang cuối >>
