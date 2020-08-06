@@ -64,6 +64,10 @@ Naming/AccessorMethodName:
   Description: Check the naming of accessor methods for get_/set_.
   Enabled: false
 
+Rails/HelperInstanceVariable:
+  Description: 'Do not use instance variables in helpers'
+  Enabled: false
+
 #################### Lint ################################
 ### Warnings
 Lint/AssignmentInCondition:
