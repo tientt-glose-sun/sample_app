@@ -30,7 +30,6 @@ en:
         present: must be blank
         required: must exist
         taken: has already been taken
-  delete: Delete
   hello: Hello world
   layouts:
     application:
@@ -111,21 +110,6 @@ en:
     create:
       fail_mess_create: Account create fail.
       success_mess: Welcome to the Sample App!
-    destroy:
-      success_mess_delete: User deleted
-      fail_mess_notfound: Account not found.
-    edit:
-      change_link: Change
-      edit_create: Save changes
-      edit_title: Edit user
-      heading: Update your profile
-      login_remind: Please log in.
-      fail_mess_notfound: Account not found.
-    index:
-      heading: All users
-      index_title: All users
-    logged_in_user:
-      login_remind: Please log in.
     new:
       description_title: This will be a signup page for new users.
       heading: Sign up
@@ -133,12 +117,3 @@ en:
       signup_title: Sign up
     show:
       fail_mess_notfound: Account not found.
-      login_remind: Hãy đăng nhập để tiếp tục.
-    update:
-      fail_mess_update: Profile update fail
-      login_remind: Please log in.
-      success_mess_update: Profile updated
-      fail_mess_notfound: Account not found.
-    user:
-      confirm: You sure?
-      delete_link: Delete
