@@ -1,4 +1,7 @@
 vi:
+  account_activations:
+    active_fail: Kích hoạt không thành công. Link không hợp lệ.
+    active_success: Kích hoạt thành công.
   activerecord:
     attributes:
       user:
@@ -63,7 +66,9 @@ vi:
   s_text: Đẹp tựa bông hoa
   sessions:
     create:
+      alert_mess_create: Tài khoản chưa đưọc kích hoạt. Hãy kiểm tra hòm thư email của bạn.
       fail_mess_create: Sai email và mật khẩu.
+      info_mess_mail: Hãy check hòm thư email của bạn để kích hoạt tài khoản.
       success_mess: Đăng nhập thành công.
     new:
       email_login: Email
@@ -109,20 +114,28 @@ vi:
       heading: Sample App
       home_title: Trang chủ
       sign_up_button: Đăng ký ngay!
+  user_mailer:
+    account_activation:
+      activate_link: Kích hoạt
+      heading: Ưng dụng mẫu
+      hello: Xin chào
+      introduce: 'Chào mừng tới Ưng dụng mẫu! Click vào link dưói để kích hoạt tài khoản:'
+      mail_subject: Thông tin kích hoạt tài khoản
   users:
     create:
       fail_mess_create: Tài khoản tạo không thành công.
+      info_mess_mail: Hãy check hòm thư email của bạn để kích hoạt tài khoản.
       success_mess: Chào mừng tới sample app!
     destroy:
-      success_mess_delete: Tài khoản đã bị xóa.
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.
+      success_mess_delete: Tài khoản đã bị xóa.
     edit:
       change_link: Thay đổi
       edit_create: Lưu thay đổi
       edit_title: Cập nhật thông tin
+      fail_mess_notfound: Không tìm thấy thông tin tài khoản.
       heading: Cập nhật hồ sơ của bạn
       login_remind: Hãy đăng nhập để tiếp tục.
-      fail_mess_notfound: Không tìm thấy thông tin tài khoản.
     index:
       heading: Danh sách toàn bộ người dùng
       index_title: Toàn bộ người dùng
@@ -137,16 +150,16 @@ vi:
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.
       login_remind: Hãy đăng nhập để tiếp tục.
     update:
+      fail_mess_notfound: Không tìm thấy thông tin tài khoản.
       fail_mess_update: Cập nhật không thành công.
       login_remind: Hãy đăng nhập để tiếp tục.
       success_mess_update: Hồ sơ cập nhật thành công.
-      fail_mess_notfound: Không tìm thấy thông tin tài khoản.
     user:
       confirm: Bạn chắc chứ?
       delete_link: Xóa
   views:
     pagination:
-      next: Trang tiếp >
-      previous: < Trang trước
       first: << Trang đầu
       last: Trang cuối >>
+      next: Trang tiếp >
+      previous: < Trang trước

@@ -1,4 +1,7 @@
 en:
+  account_activations:
+    active_fail: Invalid activation link.
+    active_success: Account activated!
   activerecord:
     attributes:
       user:
@@ -61,6 +64,7 @@ en:
   s_text: Like a flower
   sessions:
     create:
+      alert_mess_create: Account not activated. Check your email for the activation link.
       fail_mess_create: Invalid email/password combination.
       success_mess: Log in successfully.
     new:
@@ -107,20 +111,28 @@ en:
       heading: Sample App
       home_title: Home
       sign_up_button: Sign up now!
+  user_mailer:
+    account_activation:
+      activate_link: Activate
+      heading: Sample App
+      hello: Hi
+      introduce: 'Welcome to the Sample App! Click on the link below to activate your account:'
+      mail_subject: Account activation
   users:
     create:
       fail_mess_create: Account create fail.
+      info_mess_mail: Please check your email to activate your account.
       success_mess: Welcome to the Sample App!
     destroy:
-      success_mess_delete: User deleted
       fail_mess_notfound: Account not found.
+      success_mess_delete: User deleted
     edit:
       change_link: Change
       edit_create: Save changes
       edit_title: Edit user
+      fail_mess_notfound: Account not found.
       heading: Update your profile
       login_remind: Please log in.
-      fail_mess_notfound: Account not found.
     index:
       heading: All users
       index_title: All users
@@ -135,10 +147,10 @@ en:
       fail_mess_notfound: Account not found.
       login_remind: Hãy đăng nhập để tiếp tục.
     update:
+      fail_mess_notfound: Account not found.
       fail_mess_update: Profile update fail
       login_remind: Please log in.
       success_mess_update: Profile updated
-      fail_mess_notfound: Account not found.
     user:
       confirm: You sure?
       delete_link: Delete

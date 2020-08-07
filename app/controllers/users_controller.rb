@@ -5,16 +5,16 @@ class UsersController < ApplicationController
   before_action :find_user, except: %i(index new create)
 
   def index
-    @users = User.paginate page: params[:page]
+    @users = User.is_activated.page params[:page]
   end
 
   def create
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash[:success] = t ".success_mess"
-      redirect_to user_path @user
+      @user.send_activation_email
+      flash[:info] = t ".info_mess_mail"
+      redirect_to root_url
     else
       flash.now[:danger] = t ".fail_mess_create"
       render :new
@@ -25,7 +25,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def show; end
+  def show
+    redirect_to(root_url) && return unless @user.activated?
+  end
 
   def edit; end
 
@@ -60,6 +62,7 @@ class UsersController < ApplicationController
   end
 
   def correct_user
+    @user = User.find_by id: params[:id]
     redirect_to root_path unless current_user? @user
   end
 
