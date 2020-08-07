@@ -58,6 +58,24 @@ vi:
       profile_header: Hồ sơ
       setting_header: Cài đặt
       users_header: Danh sách người dùng
+  password_resets:
+    edit:
+      heading: Đặt lại mật khẩu
+      reset_submit: Cập nhật mật khẩu
+      reset_title: Đặt lại mật khẩu
+      fail_mess_create: Thiết lập lại mật khẩu lỗi.
+      fail_mess_expired: Thiết lập lại mật khẩu quá hạn.
+    new:
+      forget_create: Thiết lập lại
+      forgot_title: Quên mật khẩu
+      heading: Quên mật khẩu
+    create:
+      fail_mess_create: Không tìm thấy địa chỉ email.
+      info_mess_mail: Đã gửi email với hướng dẫn thiết lập lại mật khẩu.
+    update:
+      success_mess_update: Mật khẩu đã được thiết lập lại.
+      fail_mess_create: Thiết lập lại mật khẩu lỗi.
+      fail_mess_expired: Thiết lập lại mật khẩu quá hạn.
   ruby_on_rails: Ruby on Rails
   ruby_on_rails_book: sách hướng dẫn Rails.
   ruby_on_rails_help: trang trợ giúp Rails.
@@ -72,6 +90,7 @@ vi:
       success_mess: Đăng nhập thành công.
     new:
       email_login: Email
+      forgot_pass: (quên mật khẩu)
       heading: Đăng nhập
       login_title: Đăng nhập
       new_user: Chưa có tài khoản?
@@ -120,7 +139,17 @@ vi:
       heading: Ưng dụng mẫu
       hello: Xin chào
       introduce: 'Chào mừng tới Ưng dụng mẫu! Click vào link dưói để kích hoạt tài khoản:'
-      mail_subject: Thông tin kích hoạt tài khoản
+      mail_subject_active: Thông tin kích hoạt tài khoản
+      mail_subject_reset_pass: Thông tin đặt lại mật khẩu
+    password_reset:
+      heading: Lấy lại mật khẩu
+      reset_expire: Link này sẽ hết hạn trong 2 giờ
+      reset_link: '
+
+
+        Reset mật khẩu'
+      reset_remind: Nếu bạn không yêu cầu thiết lập lại mật khẩu, thì hãy bỏ qua email này và mật khẩu vẫn sẽ đưọc gĩư nguyên như cũ
+      reset_title: 'Để thiết lập lại mật khẩu, hãy click vào link dưói đây:'
   users:
     create:
       fail_mess_create: Tài khoản tạo không thành công.
