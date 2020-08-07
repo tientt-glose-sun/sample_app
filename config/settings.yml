@@ -28,3 +28,5 @@ gravartar:
   size_default: 80
   size_list: 50
   options_link: '?s=%{size}'
+password_reset:
+  expired_time: 2
