@@ -36,9 +36,10 @@ yarn-debug.log*
 /config/credentials.yml.enc
 /log/development.log
 
-config/settings.local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
+/storage
+/config/settings.local.yml
+/config/settings/*.local.yml
+/config/environments/*.local.yml
 
 # Ignore application configuration
 /config/application.yml

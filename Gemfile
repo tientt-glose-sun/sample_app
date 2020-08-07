@@ -3,6 +3,7 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.6.6"
 
+gem "active_storage_validations", "0.8.2"
 gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-kaminari-views"
@@ -10,8 +11,11 @@ gem "bootstrap-sass", "3.4.1"
 gem "config"
 gem "faker", "2.1.2"
 gem "figaro"
+gem "i18n-js"
+gem "image_processing", "1.9.3"
 gem "jbuilder", "~> 2.7"
 gem "kaminari"
+gem "mini_magick", "4.9.5"
 gem "mysql2", ">= 0.4.4"
 gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.2", ">= 6.0.2.1"

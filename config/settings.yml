@@ -24,9 +24,19 @@ validations:
     regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
   password:
     min_length: 6
+  content:
+    max_length: 140
 gravartar:
   size_default: 80
   size_list: 50
   options_link: '?s=%{size}'
 password_reset:
   expired_time: 2
+files:
+  image_type: /%w(image/jpeg image/gif image/png)/
+  valid_input: image/jpeg,image/gif,image/png
+  pic_resize: 500
+  pic_size: 5
+  change_digit: 1048576
+
+

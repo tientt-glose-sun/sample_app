@@ -1,0 +1,4 @@
+<%= link_to gravartar_for(current_user, size: Settings.gravartar.size_list), current_user %>
+<h1><%= current_user.name %></h1>
+<span><%= link_to t(".profile_link"), current_user %></span>
+<span><%= pluralize current_user.microposts.count, t(".suffix_count") %></span>

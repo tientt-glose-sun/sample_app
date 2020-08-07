@@ -2,7 +2,9 @@ class User < ApplicationRecord
   USERS_PARAMS = %i(name email password password_confirmation).freeze
   USERS_PARAMS_RESET = %i(password password_confirmation).freeze
 
-  attr_accessor :remember_token, :activation_token, :reset_token
+  has_many :microposts, dependent: :destroy
+
+  attr_accessor :remember_token, :activation_token
 
   scope :is_activated, ->{where activated: true}
 
@@ -58,6 +60,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.password_reset.expired_time.hours.ago
+  end
+
+  def feed
+    microposts
   end
 
   class << self
