@@ -4,37 +4,78 @@ vi:
     active_success: Kích hoạt thành công.
   activerecord:
     attributes:
+      micropost:
+        content: Nội dung
+        image: Hình ảnh
       user:
         email: Địa chỉ email
         name: Họ tên
         password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
-    errors:
-      format: '%{attribute} %{message}'
-      messages:
-        accepted: phải được đồng ý
-        blank: không thể để trắng
-        confirmation: không khớp với xác nhận
-        empty: không thể rỗng
-        equal_to: phải bằng %{count}
-        even: phải là số chẵn
-        exclusion: đã được giành trước
-        greater_than: phải lớn hơn %{count}
-        greater_than_or_equal_to: phải lớn hơn hoặc bằng %{count}
-        inclusion: không có trong danh sách
-        invalid: không hợp lệ
-        less_than: phải nhỏ hơn %{count}
-        less_than_or_equal_to: phải nhỏ hơn hoặc bằng %{count}
-        not_a_number: không phải là số
-        not_an_integer: phải là một số nguyên
-        odd: phải là số lẻ
-        other_than: cần phải khác %{count}
-        present: cần phải để trắng
-        required: phải có
-        taken: đã tồn tại
-        too_long: quá dài (tối đa %{count} ký tự)
-        too_short: quá ngắn (tối thiểu %{count} ký tự)
-        wrong_length: độ dài không đúng (phải là %{count} ký tự)
+  errors:
+    format: '%{attribute} %{message}'
+    messages:
+      accepted: phải được đồng ý
+      blank: không thể để trắng
+      confirmation: không khớp với xác nhận
+      empty: không thể rỗng
+      equal_to: phải bằng %{count}
+      even: phải là số chẵn
+      exclusion: đã được giành trước
+      greater_than: phải lớn hơn %{count}
+      greater_than_or_equal_to: phải lớn hơn hoặc bằng %{count}
+      inclusion: không có trong danh sách
+      invalid: không hợp lệ
+      invalid_pic: phải là định dạng ảnh hợp lệ
+      less_than: phải nhỏ hơn %{count}
+      less_than_mb: phải nhỏ hơn %{count} MB
+      less_than_or_equal_to: phải nhỏ hơn hoặc bằng %{count}
+      not_a_number: không phải là số
+      not_an_integer: phải là một số nguyên
+      odd: phải là số lẻ
+      other_than: cần phải khác %{count}
+      present: cần phải để trắng
+      required: phải có
+      taken: đã tồn tại
+      too_long: quá dài (tối đa %{count} ký tự)
+      too_short: quá ngắn (tối thiểu %{count} ký tự)
+      wrong_length: độ dài không đúng (phải là %{count} ký tự)
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: khoảng 1 giờ
+        other: khoảng %{count} giờ
+      about_x_months:
+        one: khoảng 1 tháng
+        other: khoảng %{count} tháng
+      about_x_years:
+        one: khoảng 1 năm
+        other: khoảng %{count} năm
+      almost_x_years:
+        one: gần 1 năm
+        other: gần %{count} năm
+      half_a_minute: 30 giây
+      less_than_x_minutes:
+        one: chưa tới 1 phút
+        other: chưa tới %{count} phút
+      less_than_x_seconds:
+        one: chưa tới 1 giây
+        other: chưa tới %{count} giây
+      over_x_years:
+        one: hơn 1 năm
+        other: hơn %{count} năm
+      x_days:
+        one: 1 ngày
+        other: '%{count} ngày'
+      x_minutes:
+        one: 1 phút
+        other: '%{count} phút'
+      x_months:
+        one: 1 tháng
+        other: '%{count} tháng'
+      x_seconds:
+        one: 1 giây
+        other: '%{count} giây'
   delete: Xóa
   hello: Xin chào thế giới
   layouts:
@@ -58,24 +99,35 @@ vi:
       profile_header: Hồ sơ
       setting_header: Cài đặt
       users_header: Danh sách người dùng
+  microposts:
+    create:
+      fail_mess: Bài đăng tạo thất bại.
+      success_mess: Bài đăng tạo thành công.
+    destroy:
+      success_mess: Bài đăng xóa thành công.
+    micropost:
+      delete_confirm: Bạn chắc chứ?
+      delete_link: Xóa
+      prefix_time: Đăng
+      suffix_time: trước.
   password_resets:
+    create:
+      fail_mess_create: Không tìm thấy địa chỉ email.
+      info_mess_mail: Đã gửi email với hướng dẫn thiết lập lại mật khẩu.
     edit:
+      fail_mess_create: Thiết lập lại mật khẩu lỗi.
+      fail_mess_expired: Thiết lập lại mật khẩu quá hạn.
       heading: Đặt lại mật khẩu
       reset_submit: Cập nhật mật khẩu
       reset_title: Đặt lại mật khẩu
-      fail_mess_create: Thiết lập lại mật khẩu lỗi.
-      fail_mess_expired: Thiết lập lại mật khẩu quá hạn.
     new:
       forget_create: Thiết lập lại
       forgot_title: Quên mật khẩu
       heading: Quên mật khẩu
-    create:
-      fail_mess_create: Không tìm thấy địa chỉ email.
-      info_mess_mail: Đã gửi email với hướng dẫn thiết lập lại mật khẩu.
     update:
-      success_mess_update: Mật khẩu đã được thiết lập lại.
       fail_mess_create: Thiết lập lại mật khẩu lỗi.
       fail_mess_expired: Thiết lập lại mật khẩu quá hạn.
+      success_mess_update: Mật khẩu đã được thiết lập lại.
   ruby_on_rails: Ruby on Rails
   ruby_on_rails_book: sách hướng dẫn Rails.
   ruby_on_rails_help: trang trợ giúp Rails.
@@ -103,6 +155,13 @@ vi:
       errors_count:
         one: Có %{count} lỗi
         other: Có %{count} lỗi
+    micropost_form:
+      alert_detail: Kích thước ảnh tối đa là 5 MB. Hãy chọn bức ảnh nhỏ hơn nhé!
+      placeholder: Hãy gõ nội dung để đăng bài ...
+      post_submit: Đăng
+    user_info:
+      profile_link: Xem tường của tôi
+      suffix_count: bài đăng
   static_pages:
     about:
       about_title: Về chúng tôi
@@ -129,7 +188,8 @@ vi:
       help_title: Trợ giúp
     home:
       description_detail: ứng dụng mẫu của
-      description_title: 'Đây là trang chủ cho '
+      description_title: Đây là trang chủ cho
+      feed_detail: Tường của bạn
       heading: Sample App
       home_title: Trang chủ
       sign_up_button: Đăng ký ngay!
@@ -144,10 +204,7 @@ vi:
     password_reset:
       heading: Lấy lại mật khẩu
       reset_expire: Link này sẽ hết hạn trong 2 giờ
-      reset_link: '
-
-
-        Reset mật khẩu'
+      reset_link: Reset mật khẩu
       reset_remind: Nếu bạn không yêu cầu thiết lập lại mật khẩu, thì hãy bỏ qua email này và mật khẩu vẫn sẽ đưọc gĩư nguyên như cũ
       reset_title: 'Để thiết lập lại mật khẩu, hãy click vào link dưói đây:'
   users:
@@ -178,6 +235,7 @@ vi:
     show:
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.
       login_remind: Hãy đăng nhập để tiếp tục.
+      prefix_count: Bài đăng
     update:
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.
       fail_mess_update: Cập nhật không thành công.

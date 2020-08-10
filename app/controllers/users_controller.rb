@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 
   def show
     redirect_to(root_url) && return unless @user.activated?
+    @microposts = @user.microposts.page params[:page]
   end
 
   def edit; end
@@ -51,14 +52,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit User::USERS_PARAMS
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t ".login_remind"
-    redirect_to login_url
   end
 
   def correct_user

@@ -4,35 +4,79 @@ en:
     active_success: Account activated!
   activerecord:
     attributes:
+      micropost:
+        content: Content
+        image: Picture
       user:
         email: Email
         name: Name
         password: Password
         password_confirmation: Confirmation
-    errors:
-      format: '%{attribute} %{message}'
-      messages:
-        accepted: must be accepted
-        blank: can't be blank
-        confirmation: doesn't match %{attribute}
-        empty: can't be empty
-        equal_to: must be equal to %{count}
-        even: must be even
-        exclusion: is reserved
-        greater_than: must be greater than %{count}
-        greater_than_or_equal_to: must be greater than or equal to %{count}
-        inclusion: is not included in the list
-        invalid: is invalid
-        less_than: must be less than %{count}
-        less_than_or_equal_to: must be less than or equal to %{count}
-        model_invalid: 'Validation failed: %{errors}'
-        not_a_number: is not a number
-        not_an_integer: must be an integer
-        odd: must be odd
-        other_than: must be other than %{count}
-        present: must be blank
-        required: must exist
-        taken: has already been taken
+  errors:
+    format: '%{attribute} %{message}'
+    messages:
+      accepted: must be accepted
+      blank: can't be blank
+      confirmation: doesn't match %{attribute}
+      empty: can't be empty
+      equal_to: must be equal to %{count}
+      even: must be even
+      exclusion: is reserved
+      greater_than: must be greater than %{count}
+      greater_than_or_equal_to: must be greater than or equal to %{count}
+      inclusion: is not included in the list
+      invalid: is invalid
+      invalid_pic: must be a valid image format
+      less_than: must be less than %{count}
+      less_than_mb: must be less than %{count} MB
+      less_than_or_equal_to: must be less than or equal to %{count}
+      model_invalid: 'Validation failed: %{errors}'
+      not_a_number: is not a number
+      not_an_integer: must be an integer
+      odd: must be odd
+      other_than: must be other than %{count}
+      present: must be blank
+      required: must exist
+      taken: has already been taken
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: about 1 hour
+        other: about %{count} hours
+      about_x_months:
+        one: about 1 month
+        other: about %{count} months
+      about_x_years:
+        one: about 1 year
+        other: about %{count} years
+      almost_x_years:
+        one: almost 1 year
+        other: almost %{count} years
+      half_a_minute: half a minute
+      less_than_x_minutes:
+        one: less than a minute
+        other: less than %{count} minutes
+      less_than_x_seconds:
+        one: less than 1 second
+        other: less than %{count} seconds
+      over_x_years:
+        one: over 1 year
+        other: over %{count} years
+      x_days:
+        one: 1 day
+        other: '%{count} days'
+      x_minutes:
+        one: 1 minute
+        other: '%{count} minutes'
+      x_months:
+        one: 1 month
+        other: '%{count} months'
+      x_seconds:
+        one: 1 second
+        other: '%{count} seconds'
+      x_years:
+        one: 1 year
+        other: '%{count} years'
   delete: Delete
   hello: Hello world
   layouts:
@@ -56,24 +100,35 @@ en:
       profile_header: Profile
       setting_header: Settings
       users_header: Users
+  microposts:
+    create:
+      fail_mess: Micropost create fail.
+      success_mess: Micropost created!
+    destroy:
+      success_mess: Micropost deleted.
+    micropost:
+      delete_confirm: You sure?
+      delete_link: Delete
+      prefix_time: Posted
+      suffix_time: ago.
   password_resets:
+    create:
+      fail_mess_create: Email address not found.
+      info_mess_mail: Email sent with password reset instructions.
     edit:
       heading: Reset pasword
       reset_submit: Update password
       reset_title: Reset pasword
     new:
+      fail_mess_create: Password reset fail.
+      fail_mess_expired: Password reset has expired.
       forget_create: Submit
       forgot_title: Forgot pasword
       heading: Forgot password
-      fail_mess_create: Password reset fail.
-      fail_mess_expired: Password reset has expired.
-    create:
-      fail_mess_create: Email address not found.
-      info_mess_mail: Email sent with password reset instructions.
     update:
-      success_mess_update: Password has been reset.
       fail_mess_create: Password reset fail.
       fail_mess_expired: Password reset has expired.
+      success_mess_update: Password has been reset.
   ruby_on_rails: Ruby on Rails
   ruby_on_rails_book: Ruby on Rails Tutorial book.
   ruby_on_rails_help: Rails Tutorial help page.
@@ -100,6 +155,13 @@ en:
       errors_count:
         one: The form contains one error
         other: The form contains %{count} errors
+    micropost_form:
+      alert_detail: Maximum file size is 5MB. Please choose a smaller file.
+      placeholder: Compose new micropost...
+      post_submit: Post
+    user_info:
+      profile_link: View my profile
+      suffix_count: micropost
   static_pages:
     about:
       about_title: About
@@ -127,6 +189,7 @@ en:
     home:
       description_detail: sample application of
       description_title: This is the home page for the
+      feed_detail: Micropost Feed
       heading: Sample App
       home_title: Home
       sign_up_button: Sign up now!
@@ -172,6 +235,7 @@ en:
     show:
       fail_mess_notfound: Account not found.
       login_remind: Hãy đăng nhập để tiếp tục.
+      prefix_count: Microposts
     update:
       fail_mess_notfound: Account not found.
       fail_mess_update: Profile update fail
