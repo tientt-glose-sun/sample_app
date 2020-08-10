@@ -12,32 +12,6 @@ en:
         name: Name
         password: Password
         password_confirmation: Confirmation
-  errors:
-    format: '%{attribute} %{message}'
-    messages:
-      accepted: must be accepted
-      blank: can't be blank
-      confirmation: doesn't match %{attribute}
-      empty: can't be empty
-      equal_to: must be equal to %{count}
-      even: must be even
-      exclusion: is reserved
-      greater_than: must be greater than %{count}
-      greater_than_or_equal_to: must be greater than or equal to %{count}
-      inclusion: is not included in the list
-      invalid: is invalid
-      invalid_pic: must be a valid image format
-      less_than: must be less than %{count}
-      less_than_mb: must be less than %{count} MB
-      less_than_or_equal_to: must be less than or equal to %{count}
-      model_invalid: 'Validation failed: %{errors}'
-      not_a_number: is not a number
-      not_an_integer: must be an integer
-      odd: must be odd
-      other_than: must be other than %{count}
-      present: must be blank
-      required: must exist
-      taken: has already been taken
   datetime:
     distance_in_words:
       about_x_hours:
@@ -78,6 +52,32 @@ en:
         one: 1 year
         other: '%{count} years'
   delete: Delete
+  errors:
+    format: '%{attribute} %{message}'
+    messages:
+      accepted: must be accepted
+      blank: can't be blank
+      confirmation: doesn't match %{attribute}
+      empty: can't be empty
+      equal_to: must be equal to %{count}
+      even: must be even
+      exclusion: is reserved
+      greater_than: must be greater than %{count}
+      greater_than_or_equal_to: must be greater than or equal to %{count}
+      inclusion: is not included in the list
+      invalid: is invalid
+      invalid_pic: must be a valid image format
+      less_than: must be less than %{count}
+      less_than_mb: must be less than %{count} MB
+      less_than_or_equal_to: must be less than or equal to %{count}
+      model_invalid: 'Validation failed: %{errors}'
+      not_a_number: is not a number
+      not_an_integer: must be an integer
+      odd: must be odd
+      other_than: must be other than %{count}
+      present: must be blank
+      required: must exist
+      taken: has already been taken
   hello: Hello world
   layouts:
     application:
@@ -129,6 +129,10 @@ en:
       fail_mess_create: Password reset fail.
       fail_mess_expired: Password reset has expired.
       success_mess_update: Password has been reset.
+  relationships:
+    index:
+      followers: Followers
+      following: Following
   ruby_on_rails: Ruby on Rails
   ruby_on_rails_book: Ruby on Rails Tutorial book.
   ruby_on_rails_help: Rails Tutorial help page.
@@ -159,6 +163,9 @@ en:
       alert_detail: Maximum file size is 5MB. Please choose a smaller file.
       placeholder: Compose new micropost...
       post_submit: Post
+    stats:
+      followers_html: <strong id="followers" class="stat"> %{count} </strong> Followers
+      following_html: <strong id="following" class="stat"> %{count} </strong> Following
     user_info:
       profile_link: View my profile
       suffix_count: micropost
@@ -222,6 +229,8 @@ en:
       fail_mess_notfound: Account not found.
       heading: Update your profile
       login_remind: Please log in.
+    follow:
+      follow: Follow
     index:
       heading: All users
       index_title: All users
@@ -236,6 +245,11 @@ en:
       fail_mess_notfound: Account not found.
       login_remind: Hãy đăng nhập để tiếp tục.
       prefix_count: Microposts
+    show_follow:
+      microposts: 'Microposts:'
+      profile: view my profile
+    unfollow:
+      unfollow: Unfollow
     update:
       fail_mess_notfound: Account not found.
       fail_mess_update: Profile update fail

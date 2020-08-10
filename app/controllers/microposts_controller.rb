@@ -39,6 +39,6 @@ class MicropostsController < ApplicationController
   end
 
   def feed_posts
-    current_user.feed.recent_posts.page params[:page]
+    current_user.feed.create_posts_at.page params[:page]
   end
 end

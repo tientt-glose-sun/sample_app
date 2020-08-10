@@ -29,6 +29,7 @@ validations:
 gravartar:
   size_default: 80
   size_list: 50
+  size_mini: 30
   options_link: '?s=%{size}'
 password_reset:
   expired_time: 2
@@ -38,5 +39,3 @@ files:
   pic_resize: 500
   pic_size: 5
   change_digit: 1048576
-
-
