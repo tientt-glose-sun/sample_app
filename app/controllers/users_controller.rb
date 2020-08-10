@@ -28,6 +28,8 @@ class UsersController < ApplicationController
   def show
     redirect_to(root_url) && return unless @user.activated?
     @microposts = @user.microposts.page params[:page]
+    @follow = current_user.active_relationships.build
+    @unfollow = current_user.active_relationships.find_by followed_id: @user.id
   end
 
   def edit; end

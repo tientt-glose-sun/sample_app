@@ -12,34 +12,6 @@ vi:
         name: Họ tên
         password: Mật khẩu
         password_confirmation: Xác nhận mật khẩu
-  errors:
-    format: '%{attribute} %{message}'
-    messages:
-      accepted: phải được đồng ý
-      blank: không thể để trắng
-      confirmation: không khớp với xác nhận
-      empty: không thể rỗng
-      equal_to: phải bằng %{count}
-      even: phải là số chẵn
-      exclusion: đã được giành trước
-      greater_than: phải lớn hơn %{count}
-      greater_than_or_equal_to: phải lớn hơn hoặc bằng %{count}
-      inclusion: không có trong danh sách
-      invalid: không hợp lệ
-      invalid_pic: phải là định dạng ảnh hợp lệ
-      less_than: phải nhỏ hơn %{count}
-      less_than_mb: phải nhỏ hơn %{count} MB
-      less_than_or_equal_to: phải nhỏ hơn hoặc bằng %{count}
-      not_a_number: không phải là số
-      not_an_integer: phải là một số nguyên
-      odd: phải là số lẻ
-      other_than: cần phải khác %{count}
-      present: cần phải để trắng
-      required: phải có
-      taken: đã tồn tại
-      too_long: quá dài (tối đa %{count} ký tự)
-      too_short: quá ngắn (tối thiểu %{count} ký tự)
-      wrong_length: độ dài không đúng (phải là %{count} ký tự)
   datetime:
     distance_in_words:
       about_x_hours:
@@ -77,6 +49,34 @@ vi:
         one: 1 giây
         other: '%{count} giây'
   delete: Xóa
+  errors:
+    format: '%{attribute} %{message}'
+    messages:
+      accepted: phải được đồng ý
+      blank: không thể để trắng
+      confirmation: không khớp với xác nhận
+      empty: không thể rỗng
+      equal_to: phải bằng %{count}
+      even: phải là số chẵn
+      exclusion: đã được giành trước
+      greater_than: phải lớn hơn %{count}
+      greater_than_or_equal_to: phải lớn hơn hoặc bằng %{count}
+      inclusion: không có trong danh sách
+      invalid: không hợp lệ
+      invalid_pic: phải là định dạng ảnh hợp lệ
+      less_than: phải nhỏ hơn %{count}
+      less_than_mb: phải nhỏ hơn %{count} MB
+      less_than_or_equal_to: phải nhỏ hơn hoặc bằng %{count}
+      not_a_number: không phải là số
+      not_an_integer: phải là một số nguyên
+      odd: phải là số lẻ
+      other_than: cần phải khác %{count}
+      present: cần phải để trắng
+      required: phải có
+      taken: đã tồn tại
+      too_long: quá dài (tối đa %{count} ký tự)
+      too_short: quá ngắn (tối thiểu %{count} ký tự)
+      wrong_length: độ dài không đúng (phải là %{count} ký tự)
   hello: Xin chào thế giới
   layouts:
     application:
@@ -128,6 +128,10 @@ vi:
       fail_mess_create: Thiết lập lại mật khẩu lỗi.
       fail_mess_expired: Thiết lập lại mật khẩu quá hạn.
       success_mess_update: Mật khẩu đã được thiết lập lại.
+  relationships:
+    index:
+      followers: Người theo dõi
+      following: Người đang theo dõi
   ruby_on_rails: Ruby on Rails
   ruby_on_rails_book: sách hướng dẫn Rails.
   ruby_on_rails_help: trang trợ giúp Rails.
@@ -159,6 +163,9 @@ vi:
       alert_detail: Kích thước ảnh tối đa là 5 MB. Hãy chọn bức ảnh nhỏ hơn nhé!
       placeholder: Hãy gõ nội dung để đăng bài ...
       post_submit: Đăng
+    stats:
+      followers_html: <strong id="followers" class="stat"> %{count} </strong> Người theo dõi
+      following_html: <strong id="following" class="stat"> %{count} </strong> Đang theo dõi
     user_info:
       profile_link: Xem tường của tôi
       suffix_count: bài đăng
@@ -222,6 +229,8 @@ vi:
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.
       heading: Cập nhật hồ sơ của bạn
       login_remind: Hãy đăng nhập để tiếp tục.
+    follow:
+      follow: Theo dõi
     index:
       heading: Danh sách toàn bộ người dùng
       index_title: Toàn bộ người dùng
@@ -236,6 +245,11 @@ vi:
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.
       login_remind: Hãy đăng nhập để tiếp tục.
       prefix_count: Bài đăng
+    show_follow:
+      microposts: 'Bài đăng:'
+      profile: Xem thông tin của tôi
+    unfollow:
+      unfollow: Bỏ theo dõi
     update:
       fail_mess_notfound: Không tìm thấy thông tin tài khoản.
       fail_mess_update: Cập nhật không thành công.
